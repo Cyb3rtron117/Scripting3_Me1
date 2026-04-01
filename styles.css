@@ -19,7 +19,7 @@
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    padding-top: 320px;
+    /*padding-top: 320px;*/
 }
 .allChests
 {
