@@ -1,0 +1,172 @@
+
+.row
+{
+    display: flex;
+    flex-direction: row;
+}
+.pixel
+{
+    width: 5px;
+    height: 5px;
+}
+.reference
+{
+    display: none;
+}
+.artwork
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding-top: 320px;
+}
+.allChests
+{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    padding-top: 320px;
+    pointer-events: none
+}
+.button_containers
+{
+    position: relative
+
+}
+.buttons
+{
+    bottom: 0;
+    left: 0;
+    opacity: 0%;
+    width: 160px;
+    height: 160px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.black
+{
+    background-color: black;
+}
+.white
+{
+    background-color: white;
+}
+.gray
+{
+    background-color: gray;
+}
+.light_gray
+{
+    background-color: lightgray;
+}
+.light_brown
+{
+    background-color: rgb(148, 92, 71);
+}
+.brown
+{
+    background-color: rgb(119, 69, 50);
+}
+.dark_brown
+{
+    background-color: rgb(99, 59, 43);
+}
+.pale_brown
+{
+    background-color: rgb(166, 131, 117);
+}
+.yellow
+{
+    background-color: rgb(237, 155, 40);
+}
+.bright_yellow
+{
+    background-color: rgb(254, 167, 17);
+}
+.dark_yellow1
+{
+    background-color: rgb(202, 118, 14);
+}
+.dark_yellow2
+{
+    background-color: rgb(171, 112, 29);
+}
+.light_yellow
+{
+    background-color: rgb(255, 184, 83);
+}
+.cream
+{
+    background-color: rgb(236, 203, 136);
+}
+.light_cream
+{
+    background-color: rgb(243, 219, 183);
+}
+
+.dark_red
+{
+    background-color: rgb(127, 0, 0);
+}
+.red
+{
+    background-color: rgb(208, 0, 0);
+}
+.hot_pink
+{
+    background-color: rgb(225, 45, 77);
+}
+.pink
+{
+    background-color: rgb(248, 155, 155);
+}
+
+.purple
+{
+    background-color: rgb(98, 0, 197);
+}
+.dark_purple
+{
+    background-color: rgb(83, 3, 158);
+}
+.light_purple
+{
+    background-color: rgb(127, 0, 255);
+}
+
+.green
+{
+    background-color: rgb(45, 225, 78);
+}
+
+.test
+{
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: anims;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+
+  display: none;
+}
+.test2
+{
+    display: none;
+}
+
+@keyframes anims
+{
+    0%   {background-color: red;}
+  25%  {background-color: yellow;}
+  50% {background-color: green;}
+  75%  {background-color: blue;}
+  100%  {background-color: palevioletred;}
+}
+.Sprites
+{
+    display: none;
+}
