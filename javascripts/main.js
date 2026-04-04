@@ -53,6 +53,12 @@ function MimicFrame4(chestNumber)
     const targetChest = document.querySelector(chestNumber);
     targetChest.innerHTML = content.innerHTML;
 }
+function MimicFrame5(chestNumber)
+{
+    const content = document.querySelector('.ms_chest5');
+    const targetChest = document.querySelector(chestNumber);
+    targetChest.innerHTML = content.innerHTML;
+}
 
 function OpenChest(whichChest, number)
 {
@@ -97,7 +103,7 @@ function opengold(whichChest)
 function openMimic(whichChest)
 {
     let currentFrame = 0;
-    const totalFrames = 3;
+    const totalFrames = 4;
     const timer = setInterval(() => {
     currentFrame++;
     if(currentFrame == 1)
@@ -111,6 +117,10 @@ function openMimic(whichChest)
     else if(currentFrame == 3)
     {
         MimicFrame4(whichChest);
+    }
+    else if(currentFrame == 4)
+    {
+        MimicFrame5(whichChest);
     }
 
     if(currentFrame >= totalFrames)
