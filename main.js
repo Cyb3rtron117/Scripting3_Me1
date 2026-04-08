@@ -1,4 +1,6 @@
 const targets = document.querySelectorAll('.allChests');
+const buttons = document.querySelectorAll('.buttons');
+
 async function Reset()
 {
     const content = document.querySelector('.ds_chest1');
@@ -6,6 +8,10 @@ async function Reset()
         el.innerHTML = content.innerHTML;
     });
     Randomise();
+    buttons.forEach(el => {
+        el.disabled = false;
+    });
+    goldcount = 0;
 }
 document.addEventListener("DOMContentLoaded", Reset);
 
@@ -60,6 +66,25 @@ function MimicFrame5(chestNumber)
     targetChest.innerHTML = content.innerHTML;
 }
 
+function GoldFrame3(chestNumber)
+{
+    const content = document.querySelector('.gs_chest3');
+    const targetChest = document.querySelector(chestNumber);
+    targetChest.innerHTML = content.innerHTML;
+}
+function GoldFrame4(chestNumber)
+{
+    const content = document.querySelector('.gs_chest4');
+    const targetChest = document.querySelector(chestNumber);
+    targetChest.innerHTML = content.innerHTML;
+}
+function GoldFrame5(chestNumber)
+{
+    const content = document.querySelector('.gs_chest5');
+    const targetChest = document.querySelector(chestNumber);
+    targetChest.innerHTML = content.innerHTML;
+}
+
 function OpenChest(whichChest, number)
 {
     if(number == Random_number)
@@ -68,31 +93,46 @@ function OpenChest(whichChest, number)
     }
     else
     {
-        openEmpty(whichChest);
+        opengold(whichChest);
     }
 }
 function opengold(whichChest)
 {
     let currentFrame = 0;
-    const totalFrames = 3;
+    const totalFrames = 4;
     const timer = setInterval(() => {
     currentFrame++;
     if(currentFrame == 1)
     {
         defaultFrame2(whichChest);
     }
-    else if(currentFrame == 2)
+    if(currentFrame == 2)
     {
-        defaultFrame3(whichChest);
+        GoldFrame3(whichChest);
     }
     else if(currentFrame == 3)
     {
-        defaultFrame4(whichChest);
+        GoldFrame4(whichChest);
+    }
+    else if(currentFrame == 4)
+    {
+        GoldFrame5(whichChest);
     }
 
     if(currentFrame >= totalFrames)
     {
         clearInterval(timer); 
+
+
+        if(goldcount == 0)
+        {
+            goldcount++;
+        }
+        else if(goldcount == 1)
+        {
+
+        }
+        
     }
     
     }, 100); // Changes frame every 100ms (10fps)
@@ -169,4 +209,4 @@ function Randomise()
     Random_number = Math.floor((Math.random() * 3) + 1)
 }
 
-
+const goldcount = 0;
