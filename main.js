@@ -1,5 +1,6 @@
 const targets = document.querySelectorAll('.allChests');
 const buttons = document.querySelectorAll('.buttons');
+goldcount = 0;
 
 async function Reset()
 {
@@ -12,6 +13,7 @@ async function Reset()
         el.disabled = false;
     });
     goldcount = 0;
+    HideCovers()
 }
 document.addEventListener("DOMContentLoaded", Reset);
 
@@ -130,7 +132,7 @@ function opengold(whichChest)
         }
         else if(goldcount == 1)
         {
-
+            showWin();
         }
         
     }
@@ -166,6 +168,7 @@ function openMimic(whichChest)
     if(currentFrame >= totalFrames)
     {
         clearInterval(timer); 
+        showLose();
     }
     
     }, 100); // Changes frame every 100ms (10fps)
@@ -202,11 +205,27 @@ function openEmpty(whichChest)
 
 }
 
-const number = 0;
-
 function Randomise()
 {
     Random_number = Math.floor((Math.random() * 3) + 1)
 }
 
-const goldcount = 0;
+function HideCovers()
+{
+    var coverDivs = document.querySelectorAll(".coverup")
+    coverDivs.forEach(el => {
+        el.classList.add("hide")
+    });   
+    
+}
+function showWin()
+{
+    var winScreen = document.querySelector(".winScreen")
+    winScreen.classList.remove("hide");
+}
+function showLose()
+{
+    var loseScreen = document.querySelector(".loseScreen")
+    loseScreen.classList.remove("hide");
+}
+
