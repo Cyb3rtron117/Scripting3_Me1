@@ -27,7 +27,8 @@
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    padding-top: 20vh;
+    padding-top: 30vh;
+    padding-bottom: 30vh;
     pointer-events: none
 }
 .button_containers
@@ -174,12 +175,11 @@
 .background
 {
     position: absolute;
-    z-index: -9999;
-    top: 0;
-    left: 0;
-    width: 100%;
+    
+    background-image: linear-gradient(to bottom, black, gray 60%, black);
     height: 100%;
-    background-image: linear-gradient(to bottom, black, gray, black);
+    width: 100%;
+    z-index: -9999;
     
 }
 body
