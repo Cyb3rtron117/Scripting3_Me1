@@ -107,15 +107,16 @@ function opengold(whichChest)
     currentFrame++;
     if(currentFrame == 1)
     {
-        defaultFrame2(whichChest);
-    }
-    if(currentFrame == 2)
-    {
-        GoldFrame3(whichChest);
         var soundCoins = document.getElementById('coins');
         soundCoins.volume = 0.5;
         soundCoins.currentTime = 0;
         soundCoins.play();
+
+        defaultFrame2(whichChest);
+    }
+    if(currentFrame == 2)
+    {
+        GoldFrame3(whichChest);        
     }
     else if(currentFrame == 3)
     {
@@ -154,15 +155,16 @@ function openMimic(whichChest)
     currentFrame++;
     if(currentFrame == 1)
     {
-        MimicFrame2(whichChest);
-    }
-    else if(currentFrame == 2)
-    {
-        MimicFrame3(whichChest);
         var soundGrowl = document.getElementById('growl');
         soundGrowl.volume = 0.5;
         soundGrowl.currentTime = 0;
         soundGrowl.play();
+
+        MimicFrame2(whichChest);
+    }
+    else if(currentFrame == 2)
+    {
+        MimicFrame3(whichChest);        
     }
     else if(currentFrame == 3)
     {
