@@ -12,25 +12,36 @@
     
   </head>
   <body>
+    <audio id="coins" src="Sounds/coins clinking.mp3" preload="auto"></audio>
+    <audio id="growl" src="Sounds/monster_growl.mp3" preload="auto"></audio>
+    <audio id="open" src="Sounds/chest_open.mp3" preload="auto"></audio>
+    <audio id="victory" src="Sounds/eaglaxle-gaming-victory-464016.mp3" preload="auto"></audio>
+    <audio id="lose" src="Sounds/u_ss015dykrt-timpani-boing-fail-146292.mp3" preload="auto"></audio>
+    <audio id="shuffle" src="Sounds/freesound_community-chest-stones-shake-46877.mp3" preload="auto"></audio>
+
     
+
     <div class="artwork">
       <div class="background"></div>      
       <div class="button_containers">
 
-      <button class="button_1 buttons" onclick="OpenChest('.chest1', 1), this.disabled=true;"></button>
+      <button class="button_1 buttons" onclick="OpenChest('.chest1', 1), openSound(), this.disabled=true;"></button>
+      <div class="spotlight"></div>
       <div class="allChests chest1">
       </div>      
 
       </div>
       
       <div class="button_containers">
-        <button class="button_2 buttons" onclick="OpenChest('.chest2', 2), this.disabled=true;"></button>
+        <button class="button_2 buttons" onclick="OpenChest('.chest2', 2), openSound(), this.disabled=true;"></button>
+        <div class="spotlight"></div>
         <div class="allChests chest2">
         </div>
       </div>
 
       <div class="button_containers">
-        <button class="button_3 buttons" onclick="OpenChest('.chest3', 3), this.disabled=true;"></button>
+        <button class="button_3 buttons" onclick="OpenChest('.chest3', 3), openSound(), this.disabled=true;"></button>
+        <div class="spotlight"></div>
         <div class="allChests chest3">
         </div>
       </div>
@@ -51,7 +62,7 @@
     </div>
     <br>
     <div class="loseScreen coverup">
-      <button class="resetButt" onclick="Reset()">
+      <button class="resetButt" onclick="Reset(), playShuffle()">
         You lost to the Mimic!
         <br>
         <br>
@@ -60,7 +71,7 @@
     </div>
 
     <div class="winScreen coverup">
-      <button class="resetButt" onclick="Reset()">
+      <button class="resetButt" onclick="Reset(), playShuffle()">
         You won!
         <br>
         <br>

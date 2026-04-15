@@ -14,6 +14,7 @@ async function Reset()
     });
     goldcount = 0;
     HideCovers()
+    
 }
 document.addEventListener("DOMContentLoaded", Reset);
 
@@ -41,7 +42,7 @@ function defaultFrame4(chestNumber)
     const content = document.querySelector('.ds_chest4');
     const targetChest = document.querySelector(chestNumber);
     targetChest.innerHTML = content.innerHTML;
-}//This is very modifed from a chatbot, and is included in the AI Evidence
+}
 
 function MimicFrame2(chestNumber)
 {
@@ -111,6 +112,10 @@ function opengold(whichChest)
     if(currentFrame == 2)
     {
         GoldFrame3(whichChest);
+        var soundCoins = document.getElementById('coins');
+        soundCoins.volume = 0.5;
+        soundCoins.currentTime = 0;
+        soundCoins.play();
     }
     else if(currentFrame == 3)
     {
@@ -137,8 +142,7 @@ function opengold(whichChest)
         
     }
     
-    }, 100); // Changes frame every 100ms (10fps)
-    //This is very modifed from a chatbot, and is included in the AI Evidence
+    }, 100); // Changes frame every 100ms
 
 }
 
@@ -155,6 +159,10 @@ function openMimic(whichChest)
     else if(currentFrame == 2)
     {
         MimicFrame3(whichChest);
+        var soundGrowl = document.getElementById('growl');
+        soundGrowl.volume = 0.5;
+        soundGrowl.currentTime = 0;
+        soundGrowl.play();
     }
     else if(currentFrame == 3)
     {
@@ -171,8 +179,7 @@ function openMimic(whichChest)
         showLose();
     }
     
-    }, 100); // Changes frame every 100ms (10fps)
-    //This is very modifed from a chatbot, and is included in the AI Evidence
+    }, 100);
 
 }
 
@@ -200,14 +207,13 @@ function openEmpty(whichChest)
         clearInterval(timer); 
     }
     
-    }, 100); // Changes frame every 100ms (10fps)
-    //This is very modifed from a chatbot, and is included in the AI Evidence
+    }, 100);
 
 }
 
 function Randomise()
 {
-    Random_number = Math.floor((Math.random() * 3) + 1)
+    Random_number = Math.floor((Math.random() * 3) + 1);
 }
 
 function HideCovers()
@@ -222,10 +228,29 @@ function showWin()
 {
     var winScreen = document.querySelector(".winScreen")
     winScreen.classList.remove("hide");
+    var soundWin = document.getElementById('victory');
+    soundWin.currentTime = 0;
+    soundWin.play();
 }
 function showLose()
 {
     var loseScreen = document.querySelector(".loseScreen")
     loseScreen.classList.remove("hide");
+    var soundLose = document.getElementById('lose');
+    soundLose.currentTime = 0;
+    soundLose.play();
+}
+function openSound()
+{
+    var soundOpen = document.getElementById('open');
+    soundOpen.currentTime = 0;
+    soundOpen.play();
+}
+function playShuffle()
+{
+    var soundShuffle = document.getElementById('shuffle');
+    soundShuffle.volume = 0.4;
+    soundShuffle.currentTime = 0;
+    soundShuffle.play();
 }
 
