@@ -7,3 +7,5 @@ W3Schools.com. (n.d.). https://www.w3schools.com/
 W3Schools.com. (n.d.). https://www.w3schools.com/jsref/event_onclick.asp
 
 the sparkle animation was made by me
+
+Favicon (n.d.). Emoji Favicons. https://favicon.io/emoji-favicons/alien-monster
