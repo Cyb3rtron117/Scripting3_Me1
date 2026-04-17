@@ -1,5 +1,8 @@
 const targets = document.querySelectorAll('.allChests');
 const buttons = document.querySelectorAll('.buttons');
+const all1Sparkles = document.querySelectorAll('.sparkle1');
+const all2Sparkles = document.querySelectorAll('.sparkle2');
+const all3Sparkles = document.querySelectorAll('.sparkle3');
 goldcount = 0;
 
 async function Reset()
@@ -90,22 +93,22 @@ function GoldFrame5(chestNumber)
 
 function OpenChest(whichChest, number)
 {
-    if(number == Random_number)
+    if(number === Random_number)
     {
         openMimic(whichChest);
     }
     else
     {
-        opengold(whichChest);
+        opengold(whichChest, number);
     }
 }
-function opengold(whichChest)
+function opengold(whichChest, sparkleNum)
 {
     let currentFrame = 0;
     const totalFrames = 4;
     const timer = setInterval(() => {
     currentFrame++;
-    if(currentFrame == 1)
+    if(currentFrame === 1)
     {
         var soundCoins = document.getElementById('coins');
         soundCoins.volume = 0.5;
@@ -113,16 +116,17 @@ function opengold(whichChest)
         soundCoins.play();
 
         defaultFrame2(whichChest);
+        playSparkle(sparkleNum);
     }
-    if(currentFrame == 2)
+    if(currentFrame === 2)
     {
-        GoldFrame3(whichChest);        
+        GoldFrame3(whichChest); 
     }
-    else if(currentFrame == 3)
+    else if(currentFrame === 3)
     {
         GoldFrame4(whichChest);
     }
-    else if(currentFrame == 4)
+    else if(currentFrame === 4)
     {
         GoldFrame5(whichChest);
     }
@@ -132,11 +136,11 @@ function opengold(whichChest)
         clearInterval(timer); 
 
 
-        if(goldcount == 0)
+        if(goldcount === 0)
         {
             goldcount++;
         }
-        else if(goldcount == 1)
+        else if(goldcount === 1)
         {
             showWin();
         }
@@ -153,7 +157,7 @@ function openMimic(whichChest)
     const totalFrames = 4;
     const timer = setInterval(() => {
     currentFrame++;
-    if(currentFrame == 1)
+    if(currentFrame === 1)
     {
         var soundGrowl = document.getElementById('growl');
         soundGrowl.volume = 0.5;
@@ -162,15 +166,15 @@ function openMimic(whichChest)
 
         MimicFrame2(whichChest);
     }
-    else if(currentFrame == 2)
+    else if(currentFrame === 2)
     {
         MimicFrame3(whichChest);        
     }
-    else if(currentFrame == 3)
+    else if(currentFrame === 3)
     {
         MimicFrame4(whichChest);
     }
-    else if(currentFrame == 4)
+    else if(currentFrame === 4)
     {
         MimicFrame5(whichChest);
     }
@@ -191,15 +195,15 @@ function openEmpty(whichChest)
     const totalFrames = 3;
     const timer = setInterval(() => {
     currentFrame++;
-    if(currentFrame == 1)
+    if(currentFrame === 1)
     {
         defaultFrame2(whichChest);
     }
-    else if(currentFrame == 2)
+    else if(currentFrame === 2)
     {
         defaultFrame3(whichChest);
     }
-    else if(currentFrame == 3)
+    else if(currentFrame === 3)
     {
         defaultFrame4(whichChest);
     }
@@ -255,4 +259,178 @@ function playShuffle()
     soundShuffle.currentTime = 0;
     soundShuffle.play();
 }
+
+function playSparkle(number)
+{
+    let currentFrame = 0;
+    const totalFrames = 7;
+    const timer = setInterval(() => {
+    currentFrame++;
+    if(currentFrame === 1)
+    {
+        Sparkle1(number);
+    }
+    else if(currentFrame === 3)
+    {
+        Sparkle2(number);   
+    }
+    else if(currentFrame === 4)
+    {
+        Sparkle3(number);
+    }
+    else if(currentFrame === 5)
+    {
+        Sparkle4(number);
+    }
+    else if(currentFrame === 6)
+    {
+        Sparkle5(number);
+    }
+    else if(currentFrame === 7)
+    {
+        Sparkle6(number);
+    }
+
+    if(currentFrame >= totalFrames)
+    {
+        clearInterval(timer);
+    }
+    
+    }, 100);
+
+}
+
+function Sparkle1(number)
+{
+    const content = document.querySelector('.ss_1');
+    if(number === 1)
+    {
+    all1Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+    else if(number === 2)
+    {
+    all2Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+    else if(number === 3)
+    {
+    all3Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+}
+function Sparkle2(number)
+{
+    const content = document.querySelector('.ss_2');
+    if(number === 1)
+    {
+    all1Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+    else if(number === 2)
+    {
+    all2Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+    else if(number === 3)
+    {
+    all3Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+}
+function Sparkle3(number)
+{
+    const content = document.querySelector('.ss_3');
+    if(number === 1)
+    {
+    all1Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+    else if(number === 2)
+    {
+    all2Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+    else if(number === 3)
+    {
+    all3Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+}
+function Sparkle4(number)
+{
+    const content = document.querySelector('.ss_4');
+    if(number === 1)
+    {
+    all1Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+    else if(number === 2)
+    {
+    all2Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+    else if(number === 3)
+    {
+    all3Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+}
+function Sparkle5(number)
+{
+    const content = document.querySelector('.ss_5');
+    if(number === 1)
+    {
+    all1Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+    else if(number === 2)
+    {
+    all2Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+    else if(number === 3)
+    {
+    all3Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+}
+function Sparkle6(number)
+{
+    const content = document.querySelector('.ss_6');
+    if(number === 1)
+    {
+    all1Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+    else if(number === 2)
+    {
+    all2Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+    else if(number === 3)
+    {
+    all3Sparkles.forEach(el => {
+        el.innerHTML = content.innerHTML;
+    });
+    }
+}
+
 

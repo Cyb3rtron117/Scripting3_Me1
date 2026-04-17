@@ -46,6 +46,33 @@
     position: absolute;
     cursor: pointer;
 }
+.sparkler
+{
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+}
+.spPos1
+{
+    top: 27vh;
+    left: 3%;
+}
+.spPos2
+{
+    top: 30vh;
+    left: 60%;
+}
+.spPos3
+{
+    top: 47vh;
+    left: 20%;
+}
+.spPos4
+{
+    top: 50vh;
+    left: 70%;
+}
+
 
 .coverup
 {
@@ -167,6 +194,32 @@
 {
     background-color: rgb(45, 225, 78);
 }
+
+.spc1
+{
+    background-color: rgb(254, 167, 17);
+}
+.spc2
+{
+    background-color: rgba(254, 167, 17, 0.75);
+}
+.spc3
+{
+    background-color: rgba(254, 167, 17, 0.5);
+}
+.spc4
+{
+    background-color: rgba(254, 167, 17, 0.25);
+}
+.spc5
+{
+    background-color: rgb(255, 184, 83);
+}
+.spc6
+{
+    background-color: rgba(255, 183, 83, 0.715);
+}
+
 .Sprites
 {
     display: none;

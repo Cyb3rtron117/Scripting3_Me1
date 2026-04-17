@@ -1,0 +1,9 @@
+BixbyBubbly (Apr 06, 2025). Chest Animation. Itch.io. https://bixbybubbly.itch.io/chest
+H, S. (2015, August 17). Hidden button above div. Stack Overflow. https://stackoverflow.com/questions/32052118/hidden-button-above-div#:~:text=Comments,1559
+Fauver, K. (2022, March 21). How to call external JavaScript function in HTML. Stack Overflow. https://stackoverflow.com/questions/9530954/how-to-call-external-javascript-function-in-html
+Tech Talk Tutorials. (2025, March 9). How to connect a JavaScript file to an HTML file | Step-by-Step tutorial [Video]. YouTube. https://www.youtube.com/watch?v=n9Rt7v8Tk7c
+W3Schools.com. (n.d.). https://www.w3schools.com/js//js_function_parameters.asp
+W3Schools.com. (n.d.). https://www.w3schools.com/
+W3Schools.com. (n.d.). https://www.w3schools.com/jsref/event_onclick.asp
+
+the sparkle animation was made by me
